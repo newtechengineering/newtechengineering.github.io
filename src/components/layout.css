@@ -1,0 +1,135 @@
+.navbar {
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+  background-color: #172a3a;
+}
+
+.carousel-inner > .item > img {
+  width: 100%;
+  max-height: 600px;
+}
+
+.box-item {
+  padding: 45px !important;
+  text-align: center;
+  background: #fff;
+  /* border-radius: 10px; */
+  box-shadow: 0 35px 57px 0 rgba(51, 51, 51, 0.1);
+}
+
+.box-item-title {
+  color: #172a3a;
+  font-weight: 500;
+}
+
+.box-item:nth-child(2) {
+  background: #efefef;
+}
+
+.btn-primary {
+  background-color: #172a3a !important;
+  border-color: #172a3a !important  ;
+}
+
+.btn-secondary {
+  background-color: #09bc8a;
+  border-color: #09bc8a;
+  color: #fff;
+}
+
+.row-eq-height {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.feature-box {
+  margin-bottom: 250px;
+  position: relative;
+}
+
+.feature-box .row {
+  margin: 0 !important;
+  position: absolute;
+  top: -150px;
+}
+
+.feature-box .row .col-md-4 {
+  /* padding: 3px; */
+}
+
+footer {
+  background: #172a3a;
+  padding: 50px 0 0 0;
+  color: #bbb;
+}
+
+ul.social-network {
+  list-style: none;
+}
+
+#sub-footer {
+  background: #132330;
+  text-shadow: none;
+  color: #5d5d5d;
+  padding: 0;
+  padding-top: 30px;
+  margin: 20px 0 0 0;
+  padding-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.card .card-wrapper {
+  background: transparent;
+  box-shadow: 0 35px 57px 0 rgba(51, 51, 51, 0.1);
+}
+
+.card .card-wrapper .card-box {
+  padding: 1.5rem;
+}
+
+.card .card-wrapper .card-img .img-text {
+  position: absolute;
+  padding: 0.6rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: #fff;
+  border-radius: 100px;
+  background-color: #09bc8a;
+}
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.machine-box {
+  margin-bottom: 100px;
+}
+.col-centered {
+  float: none !important;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #bbb;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+}
