@@ -7,17 +7,17 @@ const Header = () => (
   <Navbar inverse collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#brand">Newtech Engineering</a>
+        <Link to="/">Newtech Engineering</Link>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav pullRight>
         <NavItem eventKey={1} href="#">
-          Home
+          <Link to="/">Home</Link>
         </NavItem>
-        <NavItem eventKey={2} href="#">
-          Products
+        <NavItem eventKey={2}>
+          <Link to="/products">Products</Link>
         </NavItem>
         <NavItem eventKey={3} href="#">
           Applications

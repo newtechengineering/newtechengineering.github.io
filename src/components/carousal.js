@@ -2,7 +2,7 @@ import React from 'react'
 import { Carousel } from 'react-bootstrap'
 
 const FCarousel = ({ siteTitle }) => (
-  <Carousel style={{ width: '100%' }} indicators={false}  >
+  <Carousel style={{ width: '100%' }} indicators={false}  interval={2400} >
     <Carousel.Item>
       <img
         alt="900x500"

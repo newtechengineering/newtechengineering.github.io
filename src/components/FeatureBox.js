@@ -1,25 +1,34 @@
 import React from 'react'
 import Box from './box'
-const FeatureBox = () => (
-  <div class="container feature-box">
-    <div class="row row-eq-height justify-content-center">
-      <Box
-        title="
-What is Lorem Ipsum?"
-        content=" It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-      />
-      <Box
-        title="
-What is Lorem Ipsum?"
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
-      />
-      <Box
-        title="
-What is Lorem Ipsum?"
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, dyys"
-      />
-    </div>
-  </div>
+import { StaticQuery, graphql } from 'gatsby'
+
+const FeatureBox = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query HomeQuery {
+        allHomeJson {
+          edges {
+            node {
+              quality {
+                name
+                description
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div class="container feature-box">
+        <div class="row row-eq-height justify-content-center">
+          {data.allHomeJson.edges[0].node.quality.map((b, i) => (
+            <Box title={b.name} key={i} content={b.description} />
+          ))}
+          {console.log()}
+        </div>
+      </div>
+    )}
+  />
 )
 
 export default FeatureBox
