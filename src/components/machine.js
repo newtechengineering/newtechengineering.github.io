@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Carousel } from 'react-bootstrap'
 import Modal from 'react-modal'
 import { Table } from 'react-bootstrap'
-
 class Machine extends React.Component {
   constructor(props) {
     super(props)
@@ -20,6 +19,7 @@ class Machine extends React.Component {
 
   renderModal = () => {
     let { data } = this.props
+    let images = data.img.map(i => require(`../../data/images/${i}`))
     return (
       <Modal
         isOpen={this.state.modalIsOpen}
@@ -48,12 +48,22 @@ class Machine extends React.Component {
           <h2> {data.name} </h2>
           <div className="row d-flex">
             <div className="col-md-6">
-              <img
-                src="https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                alt="eCommerce Website Template Cafe"
-                title=""
-                className="machine-detail-image"
-              />
+              <Carousel
+                style={{ width: '100%' }}
+                indicators={false}
+                interval={10000}
+              >
+                {images.map(i => (
+                  <Carousel.Item>
+                    <img
+                      src={i}
+                      alt={data.name}
+                      title=""
+                      className="machine-detail-image"
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
             </div>
             <div className="col-md-6">
               Specifications
@@ -69,53 +79,6 @@ class Machine extends React.Component {
               </Table>
             </div>
           </div>
-          {/* <div className="row">
-            Specifications
-            <Table striped bordered condensed hover>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </div> */}
         </div>
       </Modal>
     )
@@ -123,29 +86,21 @@ class Machine extends React.Component {
 
   render() {
     let { data } = this.props
+    const img = require(`../../data/images/${data.img[0]}`)
     return (
       <div class="machine-card card px-3 py-4 col-md-3">
         <div class="card-wrapper flip-card">
-          <div class="card-img">
-            <img
-              src="https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-              alt="eCommerce Website Template Cafe"
-              title=""
-            />
-            <div class="img-text align-center display-4"> {data.category} </div>
+          <div class="card-img d-flex">
+            <img src={img} alt={data.name} title="" />
+            <div class="img-text align-center"> {data.category} </div>
           </div>
           <div class="card-box">
-            <h3 class="mbr-title mbr-fonts-style mbr-bold mbr-black align-center display-2">
+            <h3 class="align-center">
               <span style={{ fontWeight: 'normal' }}>{data.name}&nbsp;</span>
             </h3>
-            <p class="mbr-card-text mbr-fonts-style align-center display-7">
-              Model : {data.specifications.Model}
-            </p>
-            <div class="mbr-section-btn align-center">
-              <a
-                class="btn btn-md btn-primary display-4"
-                onClick={this.openModal}
-              >
+            <p class="align-center">Model : {data.specifications.Model}</p>
+            <div class="align-center">
+              <a class="btn btn-md btn-primary" onClick={this.openModal}>
                 Read More
               </a>
               {this.renderModal()}

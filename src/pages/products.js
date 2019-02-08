@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -47,10 +46,6 @@ class Product extends Component {
               {this.state.categories.map((k, i) => (
                 <ToggleButton value={i}>{k}</ToggleButton>
               ))}
-              {/* <ToggleButton value={1}>Checkbox 1 (pre-checked)</ToggleButton>
-              <ToggleButton value={2}>Checkbox 2</ToggleButton>
-              <ToggleButton value={3}>Checkbox 3 (pre-checked)</ToggleButton>
-              <ToggleButton value={4}>Checkbox 4 (disabled)</ToggleButton> */}
             </ToggleButtonGroup>
           </div>
           <div className="container machine-box">{this.renderMachines()}</div>

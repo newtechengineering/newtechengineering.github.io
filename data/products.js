@@ -1,5 +1,6 @@
 let a = [
   {
+    id: 1,
     name: 'Automatic Pouch Packing Machine Geared',
     specifications: {
       Model: 'NTE150',
@@ -18,8 +19,10 @@ let a = [
       'Construction Material': 'Body M.S, Covering S.S',
     },
     category: 'Pouch Packing',
+    img: ['1.jpg', '1-2.jpg'],
   },
   {
+    id: 2,
     name: '10 Head Multi Weigher',
     specifications: {
       Model: 'NTE101',
@@ -39,11 +42,12 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['2.jpg'],
   },
 
   {
+    id: 3,
     name: 'Screw Feeder Machine',
-
     specifications: {
       Model: ' NTE102',
       Material: 'Powder & Granules (e.g. Spices, Tea, Powder etc.)',
@@ -59,11 +63,12 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['3.jpg'],
   },
 
   {
+    id: 4,
     name: 'Fully Pneumatic Cup Filler',
-
     specifications: {
       Model: 'NTE103',
       'Sealing Type': ' Centre Seal/ Three Side Seal',
@@ -86,8 +91,10 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['4.jpg'],
   },
   {
+    id: 5,
     name: 'Fully Pneumatic Collar type packing machine',
     specifications: {
       Model: 'NTE104',
@@ -111,8 +118,10 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['5.jpg'],
   },
   {
+    id: 6,
     name: 'Band Sealer Machine',
     specifications: {
       Model: 'NTE151',
@@ -128,10 +137,11 @@ let a = [
         'Heat sealable laminated film like: PET PE, OPP PE, Aluminium Foil PE & other Heat sealable material films',
     },
     category: 'Pouch Packing',
+    img: ['6.jpg', '6-2.jpg'],
   },
   {
+    id: 7,
     name: 'Multi Track Liquid Filling Machine',
-
     specifications: {
       Model: ' NTE105',
       'Sealing Type': 'Three Side Seal/ Four Side Seal',
@@ -155,11 +165,12 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['7.jpg', '7-2.jpg'],
   },
 
   {
+    id: 8,
     name: 'Wrapping Machine',
-
     specifications: {
       Model: 'NTE106',
       'Sealing Type': 'Three Side Seal/ Pillow Type Sealing',
@@ -174,11 +185,12 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['8.jpg'],
   },
 
   {
+    id: 9,
     name: 'Granule Cup Filling Machine',
-
     specifications: {
       Model: 'NTE107',
       'Sealing Type': '',
@@ -191,11 +203,12 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['9.jpg'],
   },
 
   {
+    id: 10,
     name: 'Fully Pneumatic Augur type packing machine',
-
     specifications: {
       Model: 'NTE108',
       'Sealing Type': 'Centre Sal/ Three Side Seal',
@@ -218,6 +231,7 @@ let a = [
     },
 
     category: 'Pouch Packing',
+    img: ['10.jpg'],
   },
 ]
 

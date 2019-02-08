@@ -1,46 +1,9 @@
 import React, { Component } from 'react'
+import { Table } from 'react-bootstrap'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import {
-  ComposableMap,
-  ZoomableGroup,
-  Geographies,
-  Geography,
-  Markers,
-  Marker,
-} from 'react-simple-maps'
 
-const wrapperStyles = {
-  width: '55%',
-  maxWidth: 980,
-  margin: '0 auto',
-}
-
-const geographyData = require('../../data/world-50m.json')
-
-const include = [
-  'IND',
-  'NPL'
-]
-
-const markers = [
-  // {
-  //   markerOffset: -25,
-  //   name: 'Buenos Aires',
-  //   coordinates: [-58.3816, -34.6037],
-  // },
-  // { markerOffset: -25, name: 'La Paz', coordinates: [-68.1193, -16.4897] },
-  // { markerOffset: 35, name: 'Brasilia', coordinates: [-47.8825, -15.7942] },
-  // { markerOffset: 35, name: 'Santiago', coordinates: [-70.6693, -33.4489] },
-  // { markerOffset: 35, name: 'Bogota', coordinates: [-74.0721, 4.711] },
-  // { markerOffset: 35, name: 'Quito', coordinates: [-78.4678, -0.1807] },
-  // { markerOffset: -25, name: 'Georgetown', coordinates: [-58.1551, 6.8013] },
-  // { markerOffset: -25, name: 'Asuncion', coordinates: [-57.5759, -25.2637] },
-  // { markerOffset: 35, name: 'Paramaribo', coordinates: [-55.2038, 5.852] },
-  // { markerOffset: 35, name: 'Montevideo', coordinates: [-56.1645, -34.9011] },
-  // { markerOffset: -25, name: 'Caracas', coordinates: [-66.9036, 10.4806] },
-]
-
+const { clients } = require('../../data/clients')
 class Clients extends Component {
   constructor(props) {
     super(props)
@@ -49,90 +12,46 @@ class Clients extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Page two" />
-        <div className="container">
-          <h2>All Products</h2>
-          <div style={wrapperStyles}>
-            <ComposableMap
-              projectionConfig={{ scale:500 }}
-              width={1000}
-              height={1000}
+        <SEO title="Our Clients" />
+        <div className="container ">
+          <div className="col-lg-6">
+            <h2>Our Clients</h2>
+            <Table striped bordered condensed hover>
+              <thead>
+                <tr>
+                  <td>Client</td>
+                  <td>Place(s)</td>
+                  <td>Product(s)</td>
+                </tr>
+              </thead>
+              <tbody>
+                {clients.map(c => (
+                  <tr>
+                    <td> {c.name} </td>
+                    <td> {c.place} </td>
+                    <td> {c.product} </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
+          <div className="col-lg-6">
+            <h2>Our Reach</h2>
+            <div
               style={{
-                width: '100%',
-                height: 'auto',
+                position: 'relative',
+                height: '740px',
+                overflow: 'hidden',
+                right: '0px',
               }}
             >
-              <ZoomableGroup center={[100, 10]} disablePanning>
-                <Geographies geography={geographyData}>
-                  {(geographies, projection) =>
-                    geographies.map(
-                      (geography, i) =>
-                        include.indexOf(geography.id) !== -1 && (
-                          <Geography
-                            key={i}
-                            geography={geography}
-                            projection={projection}
-                            style={{
-                              default: {
-                                fill: '#ECEFF1',
-                                stroke: '#607D8B',
-                                strokeWidth: 0.75,
-                                outline: 'none',
-                              },
-                              hover: {
-                                fill: '#CFD8DC',
-                                stroke: '#607D8B',
-                                strokeWidth: 0.75,
-                                outline: 'none',
-                              },
-                              pressed: {
-                                fill: '#FF5722',
-                                stroke: '#607D8B',
-                                strokeWidth: 0.75,
-                                outline: 'none',
-                              },
-                            }}
-                          />
-                        )
-                    )
-                  }
-                </Geographies>
-                <Markers>
-                  {markers.map((marker, i) => (
-                    <Marker
-                      key={i}
-                      marker={marker}
-                      style={{
-                        default: { fill: '#FF5722' },
-                        hover: { fill: '#FFFFFF' },
-                        pressed: { fill: '#FF5722' },
-                      }}
-                    >
-                      <circle
-                        cx={0}
-                        cy={0}
-                        r={10}
-                        style={{
-                          stroke: '#FF5722',
-                          strokeWidth: 3,
-                          opacity: 0.9,
-                        }}
-                      />
-                      <text
-                        textAnchor="middle"
-                        y={marker.markerOffset}
-                        style={{
-                          fontFamily: 'Roboto, sans-serif',
-                          fill: '#607D8B',
-                        }}
-                      >
-                        {marker.name}
-                      </text>
-                    </Marker>
-                  ))}
-                </Markers>
-              </ZoomableGroup>
-            </ComposableMap>
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1qKbE-cmcWO2xzrO53d5c012IrUUndvr6"
+                width="580"
+                height="780"
+                style={{ position: 'absolute', top: '-50px', border: 'none' }}
+              />
+            </div>
           </div>
         </div>
       </Layout>
