@@ -22,6 +22,7 @@ class Machine extends React.Component {
     let images = data.img.map(i => require(`../../data/images/${i}`))
     return (
       <Modal
+        data-aos="zoom-in"
         isOpen={this.state.modalIsOpen}
         onRequestClose={this.closeModal}
         contentLabel="Product"
@@ -39,6 +40,15 @@ class Machine extends React.Component {
           overlay: {
             zIndex: 11,
           },
+        }}
+        // data={{
+        //   aos: 'zoom-out',
+        // }}
+        overlayRef={node => {
+          if (node) {
+            node.setAttribute('data-aos', 'zoom-out')
+            node.setAttribute('data-aos-duration', '500')
+          }
         }}
       >
         <a onClick={this.closeModal} className="btn btn-primary btn-rounded">
@@ -88,7 +98,7 @@ class Machine extends React.Component {
     let { data } = this.props
     const img = require(`../../data/images/${data.img[0]}`)
     return (
-      <div class="machine-card card px-3 py-4 col-md-3">
+      <div class="machine-card card px-3 py-4 col-md-3" data-aos="fade-up">
         <div class="card-wrapper flip-card">
           <div class="card-img d-flex">
             <img src={img} alt={data.name} title="" />

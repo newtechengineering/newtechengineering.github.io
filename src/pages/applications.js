@@ -14,7 +14,7 @@ class Applications extends Component {
     return (
       <Layout>
         <SEO title="Page two" />
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           <h2>Applications</h2>
           <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
             {Object.keys(apps).map(cat => {

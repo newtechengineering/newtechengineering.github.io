@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import FCarousel from '../components/carousal'
 import FeatureBox from '../components/FeatureBox'
 import Machine from '../components/machine'
-
+import { Link } from 'gatsby'
 const products = require('../../data/products').a.slice(0, 4)
 
 const IndexPage = () => (
@@ -25,13 +25,17 @@ const IndexPage = () => (
       <div className="row" style={{ width: '100%' }}>
         <div className="col-md-6 col-centered">
           <button className="btn btn-secondary btn-block btn-large">
-            View All Machines
+            <Link to="/products">View All Machines</Link>
           </button>
         </div>
       </div>
     </div>
 
-    <div className="container" style={{ marginBottom: '30px' }}>
+    <div
+      className="container "
+      data-aos="fade-up"
+      style={{ marginBottom: '30px' }}
+    >
       <h1>About The Company</h1>
       <div className="">
         <p>

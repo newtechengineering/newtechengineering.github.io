@@ -31,14 +31,15 @@ class BusinessEnquiry extends Component {
     })
       .then(() => {
         let msg = document.getElementById('msg')
-        msg.innerText = 'Success'
-        msg.css('display', 'block')
+        msg.innerText = "Success! We'll get back to you shortly."
+        msg.style.display = 'block'
       })
       .catch(error => {
         alert(error)
         let msg = document.getElementById('msg')
-        msg.innerText = 'Success'
-        msg.css('display', 'none')
+        msg.innerText = 'Error! Please try again.'
+        msg.style.display = 'none'
+        msg.style.color = 'red'
       })
   }
 
@@ -46,7 +47,7 @@ class BusinessEnquiry extends Component {
     return (
       <Layout>
         <SEO title="Business Enquiry" />
-        <div className="container ">
+        <div className="container be-container" data-aos="fade-up">
           <div className="row d-flex">
             <div className="col-lg-8">
               <div className="well well-sm" style={{ marginTop: '30px' }}>
@@ -154,9 +155,9 @@ class BusinessEnquiry extends Component {
                       </div>
                     </div>
                   </fieldset>
-                  <div id="msg" style={{ display: 'none' }}>
+                  <h4 id="msg" style={{ display: 'none' }}>
                     Success!
-                  </div>
+                  </h4>
                 </form>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Box from './box'
 import { StaticQuery, graphql } from 'gatsby'
 
-const FeatureBox = ({ children }) => (
+const FeatureBox = () => (
   <StaticQuery
     query={graphql`
       query HomeQuery {

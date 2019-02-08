@@ -1,6 +1,7 @@
 body {
   font-size: 18px;
 }
+
 .navbar {
   font-size: 1.8rem;
   margin-bottom: 0 !important;
@@ -75,8 +76,9 @@ footer ul {
 ul.social-network {
   list-style: none;
 }
-
 #sub-footer {
+  animation-duration: 1.4s;
+  animation-name: bounceInUp;
   background: #132330;
   text-shadow: none;
   color: #5d5d5d;
@@ -216,4 +218,10 @@ a.navbar-brand {
     margin-top: -200px;
     margin-bottom: 50px;
   }
+}
+
+#msg {
+  font-weight: 700;
+  color: #132330;
+  text-align: center;
 }

@@ -13,7 +13,7 @@ class Clients extends Component {
     return (
       <Layout>
         <SEO title="Our Clients" />
-        <div className="container ">
+        <div className="container " data-aos="fade-up">
           <div className="col-lg-6">
             <h2>Our Clients</h2>
             <Table striped bordered condensed hover>
