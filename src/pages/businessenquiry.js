@@ -31,13 +31,13 @@ class BusinessEnquiry extends Component {
     })
       .then(() => {
         let msg = document.getElementById('msg')
-        msg.innerText('Success')
+        msg.innerText = 'Success'
         msg.css('display', 'block')
       })
       .catch(error => {
         alert(error)
         let msg = document.getElementById('msg')
-        msg.innerText('Success')
+        msg.innerText = 'Success'
         msg.css('display', 'none')
       })
   }
