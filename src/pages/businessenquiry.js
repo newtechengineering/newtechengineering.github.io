@@ -20,6 +20,7 @@ class BusinessEnquiry extends Component {
                   method="post"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
+                  onSubmit={e => e.preventDefault()}
                 >
                   <input type="hidden" name="bot-field" />
                   <fieldset>

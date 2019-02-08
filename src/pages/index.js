@@ -35,7 +35,7 @@ const IndexPage = () => (
       <h1>About The Company</h1>
       <div className="">
         <p>
-          Newtech Engineering, established in the year 1996 by the most
+          New Tech Engineering, established in the year 1996 by the most
           promising leaders of the group, in order to manufacture quality
           packaging/packing machines, with strict quality control. The growth of
           the packing industry is far behind the overall economic growth where

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "New Tech Engineering Pvt. Ltd.",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Website for New Tech Engineering",
+  "version": "1.0.0",
+  "author": "Archit Kaushik <asarchit65@gmail.com>",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "gatsby": "^2.0.76",
@@ -19,10 +19,8 @@
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
-    "react-google-charts": "^3.0.10",
     "react-helmet": "^5.2.0",
     "react-modal": "^3.8.1",
-    "react-simple-maps": "^0.12.1",
     "slug": "^0.9.3",
     "unique-array-objects": "^1.0.0"
   },
