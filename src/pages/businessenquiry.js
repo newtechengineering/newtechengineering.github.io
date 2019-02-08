@@ -29,8 +29,17 @@ class BusinessEnquiry extends Component {
         ...this.state,
       }),
     })
-      .then(() => console.log('done'))
-      .catch(error => alert(error))
+      .then(() => {
+        let msg = document.getElementById('msg')
+        msg.innerText('Success')
+        msg.css('display', 'block')
+      })
+      .catch(error => {
+        alert(error)
+        let msg = document.getElementById('msg')
+        msg.innerText('Success')
+        msg.css('display', 'none')
+      })
   }
 
   render() {
@@ -145,6 +154,9 @@ class BusinessEnquiry extends Component {
                       </div>
                     </div>
                   </fieldset>
+                  <div id="msg" style={{ display: 'none' }}>
+                    Success!
+                  </div>
                 </form>
               </div>
             </div>
