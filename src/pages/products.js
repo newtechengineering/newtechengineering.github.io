@@ -33,9 +33,9 @@ class Product extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Page two" />
+        <SEO title="All Products" />
         <div className="container">
-          <h2>All Products</h2>
+          <h1>All Products</h1>
           {console.log(this.state)}
           <div className="product-filters">
             <ToggleButtonGroup

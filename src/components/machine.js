@@ -55,7 +55,7 @@ class Machine extends React.Component {
           x
         </a>
         <div className="machine-modal">
-          <h2> {data.name} </h2>
+          <h1> {data.name} </h1>
           <div className="row d-flex">
             <div className="col-md-6">
               <Carousel
@@ -110,8 +110,8 @@ class Machine extends React.Component {
             </h3>
             <p class="align-center">Model : {data.specifications.Model}</p>
             <div class="align-center">
-              <a class="btn btn-md btn-primary" onClick={this.openModal}>
-                Read More
+              <a class="link-primary" onClick={this.openModal}>
+                Read More...
               </a>
               {this.renderModal()}
             </div>

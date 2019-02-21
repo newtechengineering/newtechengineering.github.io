@@ -24,7 +24,7 @@ const IndexPage = () => (
       </div>
       <div className="row" style={{ width: '100%' }}>
         <div className="col-md-6 col-centered">
-          <button className="btn btn-secondary btn-block btn-large">
+          <button className="btn btn-primary btn-block btn-large">
             <Link to="/products">View All Machines</Link>
           </button>
         </div>
@@ -32,7 +32,7 @@ const IndexPage = () => (
     </div>
 
     <div
-      className="container "
+      className="container about-box"
       data-aos="fade-up"
       style={{ marginBottom: '30px' }}
     >

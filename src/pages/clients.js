@@ -15,7 +15,7 @@ class Clients extends Component {
         <SEO title="Our Clients" />
         <div className="container " data-aos="fade-up">
           <div className="col-lg-6">
-            <h2>Our Clients</h2>
+            <h1>Our Clients</h1>
             <Table striped bordered condensed hover>
               <thead>
                 <tr>
@@ -35,8 +35,8 @@ class Clients extends Component {
               </tbody>
             </Table>
           </div>
-          <div className="col-lg-6">
-            <h2>Our Reach</h2>
+          <div className="col-lg-6 pos-sticky">
+            <h1>Our Reach</h1>
             <div
               style={{
                 position: 'relative',

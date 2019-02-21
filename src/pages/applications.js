@@ -13,14 +13,14 @@ class Applications extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Page two" />
+        <SEO title="Applications" />
         <div className="container" data-aos="fade-up">
-          <h2>Applications</h2>
+          <h1>Applications</h1>
           <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
             {Object.keys(apps).map(cat => {
               return (
                 <div className="col-xs-12 col-lg-4 col-md-6">
-                  <h4> {cat} </h4>
+                  <h3> {cat} </h3>
                   <Table striped bordered condensed hover>
                     <thead>
                       <tr>
