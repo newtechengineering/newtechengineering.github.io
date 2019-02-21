@@ -34,7 +34,7 @@ class Layout extends Component {
                 <footer>
                   <div class="container">
                     <div class="row mb-flex">
-                      <div class="col-md-4">
+                      <div class="col-xs-12 col-md-4">
                         <div class="widget" style={{ height: '100%' }}>
                           <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892.6899992411768!2d80.28198692210107!3d26.495671368928583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38269f89ed2d%3A0x1479bff457dcbaaf!2sLakhanpur%2C+Lakhanpur+Housing+Society%2C+Khyora%2C+Kanpur%2C+Uttar+Pradesh+208024!5e0!3m2!1sen!2sin!4v1549627375793"
@@ -49,7 +49,7 @@ class Layout extends Component {
                           />
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-xs-12 col-md-4">
                         <div class="widget">
                           <h5 class="widgetheading">Social Media</h5>
                           <ul class="link-list">
@@ -63,7 +63,7 @@ class Layout extends Component {
                         </div>
                       </div>
 
-                      <div class="col-md-4">
+                      <div class="col-xs-12 col-md-4">
                         <div class="widget">
                           <h5 class="widgetheading">Get in touch with us</h5>
                           <address>
