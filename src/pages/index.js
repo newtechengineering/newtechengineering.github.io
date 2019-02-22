@@ -11,7 +11,7 @@ const products = require('../../data/products').a.slice(0, 4)
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div>
+    <div className="carousel-cont">
       <FCarousel />
     </div>
     <FeatureBox />

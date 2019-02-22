@@ -6,19 +6,19 @@ const FCarousel = () => (
     <Carousel.Item>
       <img
         alt=""
-        src="https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260s"
       />
     </Carousel.Item>
     <Carousel.Item>
       <img
         alt="900x500"
-        src="https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
       />
     </Carousel.Item>
     <Carousel.Item>
       <img
         alt="900x500"
-        src="https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+        src="https://static.webshopapp.com/shops/043412/files/113312195/microsonic-ultrasonic-edge-sensor-foil-packaging-m.jpg"
       />
     </Carousel.Item>
   </Carousel>
