@@ -24,9 +24,11 @@ const IndexPage = () => (
       </div>
       <div className="row" style={{ width: '100%' }}>
         <div className="col-md-6 col-centered">
-          <button className="btn btn-primary btn-block btn-large">
-            <Link to="/products">View All Machines</Link>
-          </button>
+          <Link to="/products">
+            <button className="btn btn-primary btn-block btn-large">
+              View All Machines
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -7,6 +7,8 @@ const Header = () => (
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">New Tech Engineering</Link>
+        <br />
+        <p className="tagline text-center">Automating new trends in packaging...</p>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
