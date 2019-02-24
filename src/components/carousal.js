@@ -6,7 +6,7 @@ const FCarousel = () => (
     <Carousel.Item>
       <img
         alt=""
-        src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260s"
+        src="https://c1.staticflickr.com/5/4914/46104595901_a21bfc6918_b.jpg"
       />
     </Carousel.Item>
     <Carousel.Item>

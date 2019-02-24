@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, url }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -52,7 +52,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
             ]
               .concat(
-                keywords.length > 0
+                data.site.siteMetadata.keywords.length > 0
                   ? {
                       name: `keywords`,
                       content: keywords.join(`, `),
@@ -60,7 +60,25 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <html lang="en" />
+            <title itemProp="name" lang="en">
+              {title}
+            </title>
+            <meta name="description" content={metaDescription} />
+            <meta name="keywords" content={data.site.siteMetadata.keywords} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={metaDescription} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={data.site.siteMetadata.url} />
+            <meta property="og:site_name" content={title} />
+            <meta itemProp="name" content={title} />
+            <meta itemProp="description" content={metaDescription} />
+            <meta name="twitter:url" content={data.site.siteMetadata.url} />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={metaDescription} />
+            <meta name="twitter:image:alt" content={title} />
+          </Helmet>
         )
       }}
     />
@@ -90,6 +108,8 @@ const detailsQuery = graphql`
         title
         description
         author
+        url
+        keywords
       }
     }
   }

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `New Tech Engineering`,
+    title: `New Tech Engineering, Kanpur`,
     description: `New Tech Engineering, established in the year 1996 by the most promising leaders of the group, in order to manufacture quality packaging/packing machines, with strict quality control. The growth of
     the packing industry is far behind the overall economic growth where came the need of a custom built packaging machines to improve upon the
     prevailing packing standards. 
@@ -8,6 +8,23 @@ module.exports = {
     enthusiastic sales & service team to take care of customer's requirement.
     Manufacturers & exporters of Pouch Packing Machines, Pouch Packaging Machines, Form Fill & Seal machines, Powder Packing & Liquid filling machines, fully pneumatic collar type, semi-pneumatic collar type, sugar type, Packing of Free flowing & Non-sticky course in India.`,
     author: `@newtechengineering`,
+    url: 'https://newtechengineering.netlify.com',
+    keywords: [
+      'new tech engineering kanpur',
+      'newtech engineering kanpur',
+      'new tech. engineering kanpur',
+      'new tech engineering ',
+      'new tech kanpur',
+      'new tech',
+      'new tech machines kanpur',
+      'new tech packaging kanpur',
+      'new tech packaging machines kanpur',
+      'kanpur',
+      'packaging',
+      'machines',
+      'packaging machines',
+      'new tech engineering kanpur',
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
