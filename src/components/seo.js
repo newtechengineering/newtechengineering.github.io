@@ -78,6 +78,10 @@ function SEO({ description, lang, meta, keywords, title, url }) {
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={metaDescription} />
             <meta name="twitter:image:alt" content={title} />
+            <meta
+              name="google-site-verification"
+              content="hbA8jcJ2voBJxpDHRj74y0jsS2eF20sgApqcb2SlOtI"
+            />
           </Helmet>
         )
       }}
