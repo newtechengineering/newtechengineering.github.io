@@ -18,7 +18,7 @@ let a = [
         'Heat sealable laminated film like: PET PE, OPP PE, Aluminium Foil PE & other Heat sealable material films.',
       'Construction Material': 'Body M.S, Covering S.S',
     },
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['1.jpg', '1-2.jpg'],
   },
   {
@@ -41,7 +41,7 @@ let a = [
       Structure: 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['2.jpg'],
   },
 
@@ -62,7 +62,7 @@ let a = [
       'Tank Material': '202 Grade Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['3.jpg'],
   },
 
@@ -90,7 +90,7 @@ let a = [
       'Construction Material': 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['4.jpg'],
   },
   {
@@ -117,7 +117,7 @@ let a = [
       'Construction Material': 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['5.jpg'],
   },
   {
@@ -136,7 +136,7 @@ let a = [
       'Film Roll':
         'Heat sealable laminated film like: PET PE, OPP PE, Aluminium Foil PE & other Heat sealable material films',
     },
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['6.jpg', '6-2.jpg'],
   },
   {
@@ -164,7 +164,7 @@ let a = [
       'Construction Material': 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['7.jpg', '7-2.jpg'],
   },
 
@@ -184,7 +184,7 @@ let a = [
       'Construction Material': 'Stainless Steel/ M.S Body',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['8.jpg'],
   },
 
@@ -202,7 +202,7 @@ let a = [
       'Construction Material': 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['9.jpg'],
   },
 
@@ -230,7 +230,7 @@ let a = [
       'Construction Material': 'Stainless Steel',
     },
 
-    category: 'Pouch Packing',
+    category: 'Form-Fill-Seal Machine',
     img: ['10.jpg'],
   },
 ]

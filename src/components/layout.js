@@ -37,7 +37,7 @@ class Layout extends Component {
                       <div class="col-xs-12 col-md-4">
                         <div class="widget" style={{ height: '100%' }}>
                           <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892.6899992411768!2d80.28198692210107!3d26.495671368928583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c38269f89ed2d%3A0x1479bff457dcbaaf!2sLakhanpur%2C+Lakhanpur+Housing+Society%2C+Khyora%2C+Kanpur%2C+Uttar+Pradesh+208024!5e0!3m2!1sen!2sin!4v1549627375793"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59169.346355760936!2d79.01735087781636!3d22.046376400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c39f2923d0201%3A0xe7b5479dcd759a3c!2sNEW+TECH+ENGINEERING!5e0!3m2!1sen!2sin!4v1552234090977"
                             allowfullscreen
                             frameborder="0"
                             width="100"
@@ -53,12 +53,11 @@ class Layout extends Component {
                         <div class="widget">
                           <h5 class="widgetheading">Social Media</h5>
                           <ul class="link-list">
-                            <li>
-                              <a href="#">Twitter</a>
-                            </li>
-                            <li>
-                              <a href="#">Instagram</a>
-                            </li>
+                            {common.social.map(m => (
+                              <li>
+                                <a href={m.url}> {m.name} </a>
+                              </li>
+                            ))}
                           </ul>
                         </div>
                       </div>

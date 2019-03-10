@@ -51,10 +51,10 @@ const IndexPage = () => (
           and ready to take any challenge. The company has well qualified
           enthusiastic sales & service team to take care of customer's
           requirement. <br />
-          Manufacturers & exporters of Pouch Packing Machines, Pouch Packaging
-          Machines, Form Fill & Seal machines, Powder Packing & Liquid filling
-          machines, fully pneumatic collar type, semi-pneumatic collar type,
-          sugar type, Packing of Free flowing & Non-sticky course in India.
+          Manufacturers & exporters of Pouch Packing Machines, Form Fill & Seal
+          machines, Powder Packing & Liquid filling machines, fully pneumatic
+          collar type, semi-pneumatic collar type, sugar type, Packing of Free
+          flowing & Non-sticky course in India.
         </p>
       </div>
     </div>

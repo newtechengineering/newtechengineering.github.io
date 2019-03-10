@@ -72,13 +72,6 @@ table {
   z-index: 2;
 }
 
-.box-item:hover {
-  outline: 1rem solid #3cc47c;
-  outline-offset: 5px;
-  z-index: 3;
-  transform: scale(1.2) !important;
-}
-
 .about-box {
   box-shadow: 0 35px 57px 0 rgba(51, 51, 51, 0.1);
   padding: 3rem 5rem !important;
@@ -310,6 +303,15 @@ nav a:focus {
     position: -webkit-sticky;
     position: sticky !important ;
     top: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .box-item:hover {
+    outline: 1rem solid #3cc47c;
+    outline-offset: 5px;
+    z-index: 3;
+    transform: scale(1.2) !important;
   }
 }
 

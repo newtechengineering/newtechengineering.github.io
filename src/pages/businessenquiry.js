@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import getFirebase from '../fb'
 
 function encode(data) {
   return Object.keys(data)
@@ -11,36 +12,61 @@ function encode(data) {
 class BusinessEnquiry extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      firebase: null,
+      data: {},
+    }
+  }
+
+  componentDidMount() {
+    const app = import('firebase/app')
+    const database = import('firebase/database')
+
+    Promise.all([app, database]).then(values => {
+      console.log(values)
+      const firebase = getFirebase(values[0])
+      this.setState({ firebase })
+    })
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({
+      data: { ...this.state.data, [e.target.name]: e.target.value },
+    })
   }
 
   handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+    const messagesRef = this.state.firebase
+      .database()
+      .ref()
+      .child('messages')
+
+    messagesRef.push(this.state.data)
+    // const form = e.target
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({
+    //     'form-name': form.getAttribute('name'),
+    //     ...this.state,
+    //   }),
+    // })
+    //   .then(() => {
+    let msg = document.getElementById('msg')
+    msg.innerText = "Success! We'll get back to you shortly."
+    msg.style.display = 'block'
+    this.setState({
+      data: {},
     })
-      .then(() => {
-        let msg = document.getElementById('msg')
-        msg.innerText = "Success! We'll get back to you shortly."
-        msg.style.display = 'block'
-      })
-      .catch(error => {
-        alert(error)
-        let msg = document.getElementById('msg')
-        msg.innerText = 'Error! Please try again.'
-        msg.style.display = 'none'
-        msg.style.color = 'red'
-      })
+    // })
+    // .catch(error => {
+    //   alert(error)
+    //   let msg = document.getElementById('msg')
+    //   msg.innerText = 'Error! Please try again.'
+    //   msg.style.display = 'none'
+    //   msg.style.color = 'red'
+    // })
   }
 
   render() {
