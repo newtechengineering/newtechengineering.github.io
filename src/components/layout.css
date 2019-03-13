@@ -311,7 +311,7 @@ nav a:focus {
     outline: 1rem solid #3cc47c;
     outline-offset: 5px;
     z-index: 3;
-    transform: scale(1.2) !important;
+    transform: scale(1.1) !important;
   }
 }
 
